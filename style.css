@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --fonte: 'Red Hat Display', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte);
+}
+
+html {
+    background-image: url('order-summary-component-main/images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: #fff;
+    width: 450px;
+    height: 700px;
+    margin: 80px auto;
+    border-radius: 20px;
+}
+
+.container img {
+    width: 450px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.container .main-content {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container .main-content h1 {
+    font-size: 1.8em;
+    font-weight: 900;
+}
+
+.container .main-content p {
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.plan::before {
+    content: url('order-summary-component-main/images/icon-music.svg');
+    margin-left: -30px;
+}
+
+.plan .annual-plan {
+    margin-left: -70px;
+}
+
+.plan h3 {
+    font-size: 18px;
+}
+
+.plan p {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.plan .button-change a {
+    text-decoration: none;
+    color: #766CF1;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons .button-pay {
+    background-color: #766CF1;
+    color: white;
+    margin: 20px auto;
+    padding: 15px 115px;
+    border-radius: 15px;
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.479);
+}
+
+.buttons .button-cancel {
+    color: rgb(53, 53, 53);
+    margin: 20px auto;
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+@media (max-width: 425px) {
+    .container {
+        width: 300px;
+        height: 600px;
+        margin: 50px auto;
+    }
+
+    .container img {
+        width: 300px;
+    }
+
+    .buttons .button-pay {
+        background-color: #766CF1;
+        color: white;
+        margin: 20px auto;
+        padding: 15px 60px;
+        border-radius: 15px;
+        border: none;
+        font-weight: 900;
+        cursor: pointer;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.479);
+    }
+
+    .plan::before {
+        content: url('order-summary-component-main/images/icon-music.svg');
+        margin-left: -15px;
+    }
+
+    .plan .annual-plan {
+        margin-left: -20px;
+    }
+}
